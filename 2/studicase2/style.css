@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #817CFF;
+}
+
+.navbar {
+    height: 37px;
+    margin: 33px 77px 0 77px;
+    display: inline-block;
+}
+#Web {
+    display: inline-block;
+    margin-right: 140px;
+    font-size: 28px;
+}
+.navbar .nav{
+    display: inline-block;
+    text-decoration: none;
+    margin-right: 60px;
+    font-size: 18px;
+}
+#Login {
+    margin-left: 40px;
+    border-radius: 20px;
+    color: #504BE5;
+    height: 37px;
+    width: 101px;
+    border: none;
+    font-size: 18px;
+    margin: 0 30px 0 80px;
+}
+#Sign {
+    margin-left: 40px;
+    border-radius: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    height: 37px;
+    width: 101px;
+    border: 1px solid white;
+    font-size: 18px;
+    margin: 0 0 0 0;
+}
+
+.content {
+    margin: 100px 0 0 77px;
+}
+
+#inti {
+    font-size: 54px;
+    margin-bottom: 20px;
+}
+#deskripsi {
+    width: 50%;
+    margin-bottom: 90px;
+}
+
+#try {
+    margin-left: 40px;
+    border-radius: 50px;
+    color: #504BE5;
+    height: 69px;
+    width: 203px;
+    border: none;
+    font-size: 24px;
+}
+
+#more {
+    font-size: 18px;
+    margin-left: 40px;
+}
+
+img {
+    width: 520px;
+    height: 370px;
+    top: 170px;
+    left: 665px;
+    position: absolute;
+}
+
+#satu {
+    width: 384px;
+    height: 380px;
+    position: absolute;
+    background-color: white;
+    border-radius: 100%;
+    display: block;
+    opacity: 10%;
+    top: -120px;
+    left: -79px;
+} 
+#dua {
+    height: 80px;
+    width: 80px;
+    background-color: white;
+    opacity: 10%;
+    border-radius: 100%;
+    position: absolute;
+    top: 215px;
+    left: 133px;
+}   
+#tiga {
+    width: 484px;
+    height: 480px;
+    position: absolute;
+    background-color: white;
+    border-radius: 100%;
+    display: block;
+    opacity: 10%;
+    top: -320px;
+    right: -162px;
+}
+#empat {
+    width: 380px;
+    height: 380px;
+    position: absolute;
+    background-color: white;
+    border-radius: 100%;
+    display: block;
+    opacity: 10%;
+    bottom: -260px;
+    left: -210px;
+}
+#lima {
+    width: 380px;
+    height: 380px;
+    position: absolute;
+    background-color: white;
+    border-radius: 100%;
+    display: block;
+    opacity: 10%;
+    bottom: -40px;
+    right: -210px;
+}
+#enam {    
+    width: 580px;
+    height: 580px;
+    position: absolute;
+    background-color: white;
+    border-radius: 100%;
+    display: block;
+    opacity: 10%;
+    bottom: -440px;
+    right: 0px;
+}
