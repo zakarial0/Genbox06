@@ -8,6 +8,7 @@
 body {
     background-color: #817CFF;
     overflow: hidden;
+    position: relative;
 }
 
 .navbar {
@@ -65,8 +66,8 @@ body {
     margin-left: 40px;
     border-radius: 50px;
     color: #504BE5;
-    height: 69px;
-    width: 203px;
+    height: 59px;
+    width: 183px;
     border: none;
     font-size: 24px;
 }
@@ -94,6 +95,7 @@ img {
     opacity: 10%;
     top: -120px;
     left: -79px;
+    z-index: -1;
 } 
 #dua {
     height: 80px;
@@ -104,6 +106,7 @@ img {
     position: absolute;
     top: 215px;
     left: 133px;
+    z-index: -1;
 }   
 #tiga {
     width: 484px;
@@ -115,6 +118,7 @@ img {
     opacity: 10%;
     top: -320px;
     right: -162px;
+    z-index: -1;
 }
 #empat {
     width: 380px;
@@ -124,8 +128,9 @@ img {
     border-radius: 100%;
     display: block;
     opacity: 10%;
-    bottom: -260px;
+    bottom: -360px;
     left: -210px;
+    z-index: -1;
 }
 #lima {
     width: 380px;
@@ -135,8 +140,9 @@ img {
     border-radius: 100%;
     display: block;
     opacity: 10%;
-    bottom: -40px;
+    bottom: -160px;
     right: -210px;
+    z-index: -1;
 }
 #enam {    
     width: 580px;
@@ -146,6 +152,7 @@ img {
     border-radius: 100%;
     display: block;
     opacity: 10%;
-    bottom: -440px;
+    bottom: -560px;
     right: 0px;
+    z-index: -1;
 }
