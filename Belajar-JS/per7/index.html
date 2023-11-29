@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Sederhana</title>
+</head>
+<body>
+    <Script>
+
+        // closure function
+        function Bank() {
+            let saldo = 0;
+            alert("Selamat Datang di Bank Online Sederhana")
+        
+        function exit(){
+            alert("Terima kasih");
+        }
+
+        function tarikTunai() {
+            let tarik = Number(prompt("masukan nominal uang yang akan diambil"));
+            if (tarik === 0) {
+                alert("mohon masukan nominal uang");
+                return tarikTunai();
+            }else if(isNaN(tarik)){
+                alert("mohon gunakan angka ");
+                return tarikTunai();
+            } else if (tarik > saldo) {
+                alert("saldo anda tidak mencukupi");
+                return mainMenu();
+            }else{
+                console.log(tarik);
+                saldo = saldo - tarik;
+                alert("berhasil menarik tunai sebesar " + tarik + " rupiah");
+                alert("saldo anda menjadi " + saldo);
+                mainMenu();
+            }
+        }
+
+        function setorTunai() {
+            let setor = Number(prompt("masukan jumlah uang yang mau ditambahkan"));
+            if (setor === 0 ) {
+                alert("mohon masukan nominal uang");
+                return setorTunai();
+            }else if(isNaN(setor)){
+                alert("mohon gunakan angka");
+                return setorTunai();
+            }else{
+                console.log(setor);
+                saldo = saldo + setor;
+                alert("berhasil menabung sebesar " + setor + " rupiah");
+                alert("saldo anda menjadi " + saldo);
+                return mainMenu();
+            }
+        }
+
+        function cekSaldo() {
+            alert("anda mempunyai saldo sebesar " + saldo + " rupiah");
+            mainMenu();
+        }
+
+        function mainMenu() {         
+            let menu = prompt("pilih menggunakan angka : 1.cek saldo, 2.setor tunai, 3.tarik tunai, 4.keluar");
+            switch (menu) {
+            case "1":
+                cekSaldo();
+                break;
+                
+            case "2":
+                setorTunai();
+                break;
+                
+            case "3":
+                tarikTunai();            
+                break;
+
+            case "4":
+                exit();
+                break;
+            default:
+                alert("mohon pilih aksi yang akan dilakukan");
+                mainMenu();
+                break;
+            }
+        }
+        return mainMenu();
+        }
+        Bank();
+    </Script>
+</body>
+</html>
