@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Bank Rut</title>
+    </head>
+    <body>
+    <script>
+            
+        let dana = 0;
+        
+        function menu() {
+            bank();
+        }
+        function done(){
+            alert("Terima kasih");
+        }
+        
+        alert("Selamat datang di Bank Rut");
+        alert("apa yang ingin anda lakukan");
+        bank();
+
+        function setor() {
+            
+            let add = Number(prompt("masukan jumlah uang yang mau ditambahkan"));
+            if (add === 0) {
+                alert("mohon masukan nominal uang");
+                return setor();
+            }else if(isNaN(add)){
+                alert("mohon gunakan angka");
+                return setor();
+            }else{
+                console.log(add);
+                dana = dana + add;
+                alert("berhasil menabung sebesar " + add + " rupiah");
+            }
+            menu();
+        }
+        function tarik() {
+            
+            let min = Number(prompt("masukan nominal uang yang akan diambil"));
+            if (min === 0) {
+                alert("mohon masukan nominal uang");
+                return tarik();
+            }else if(isNaN(min)){
+                alert("mohon gunakan angka ");
+                return tarik();
+            } else if (min > dana) {
+                alert("saldo anda tidak mencukupi");
+                return menu();
+            }else{
+                console.log(min);
+                dana = dana - min;
+                alert("berhasil menarik tunai sebesar " + min + " rupiah");
+            }
+            menu();
+        }
+
+        
+
+        function saldo() {
+            if (dana === 0) {
+                alert("anda mempunyai saldo sebesar 0 rupiah");
+            } else {
+                alert("anda mempunyai saldo sebesar " + dana + " rupiah");
+            }
+            menu();
+        }
+
+        
+        
+        function bank() {
+            let task = prompt(["pilih menggunakan angka : 0.cek saldo", "1.setor tunai", "2.tarik tunai", "3.keluar"]);
+            switch (task) {
+            case "0":
+                saldo();
+                break;
+                
+            case "1":
+                setor();
+                break;
+                
+            case "2":
+                tarik();            
+                break;
+
+            case "3":
+                done();
+                break;
+            default:
+                alert("mohon pilih aksi yang akan dilakukan");
+                menu();
+                break;
+        }
+}
+                            
+                            
+    </script>
+</body>
+</html>

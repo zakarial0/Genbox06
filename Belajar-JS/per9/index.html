@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>per9</title>
+</head>
+<body>
+    <script>
+
+        // // spread dipake buat mecah data array
+        // // spread pake ... di depan 
+        // // ini dipake buat pecah data di array
+        // let data1 = ['a','b','c','d']
+        // let data2 = ['e','f','g','h']
+        // let data3 = ['i','j','k','l']
+
+        // let union = ['ab', ...data1, 'ac', ...data2]
+        // // let union = data.concat(data2, data3, 'ab') 
+        // //  ada 2 cara buat spread
+
+        // console.log(union);
+
+        // // spread dengan parameter
+        // let kata = (a, ...b) => {
+        //     if (b.length > 0) {
+        //         return a + b.join(' ')
+        //     } else {
+        //         return a
+        //     }
+        // }
+        // console.log(kata('aku', ' makan', 'nasi', 'kuning'));
+        // // console.log(kata('aku'));
+
+        // let datas = ['a','b','c','d']
+        // let [satu, dua, ...tiga] = datas
+
+        // console.log(satu);
+        // console.log(tiga);
+        // console.log(dua);
+        
+
+        // destruct dipake buat mecah object
+        const data = {
+            nama :'dede',
+            hobi : 'turu',
+            hobi3 : 'turu'
+        }
+
+        
+        let test = ({nama, hobi, ...test}, [a, b]) => {
+            return `nama saya ${nama} hobi saya ${hobi}`
+        }
+        console.log(test(data), ['a','b'])
+        
+       
+        // let {nama, hobi } = data
+        // console.log(nama);
+        // console.log(hobi);
+        </script>
+</body>
+</html>

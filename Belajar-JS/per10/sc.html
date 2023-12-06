@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studi Case per10</title>
+</head>
+<body>
+    <h1>To Do List</h1>
+    <form>
+        <input type="text">
+        <button>Add</button>
+        <br>
+        <small>List :</small>
+        <ul>
+        </ul>
+        <script>
+        let data = []
+
+        let input = document.querySelector("input")
+        let form = document.querySelector("form")
+        let button = document.querySelector("button")
+        let list = document.querySelector("ul")
+        
+
+        form.addEventListener("submit", (no) =>{
+            no.preventDefault()
+            data.push(input.value)
+            list.innerHTML = render(data)
+        })
+
+        let render = (todo) => {
+            let print = []
+            todo.forEach(item => {
+                print.push('<li>'+ item +'</li>')
+            })
+
+            return print.join('')
+        }
+        console.log(data);
+        </script>
+    </form>
+</body>
+</html>

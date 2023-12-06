@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+      label{
+        width: 5.9rem;
+        height: 2.625rem;
+        display: block;
+        background: white;
+        border-radius: 2rem;
+        cursor: pointer;
+        position: absolute;
+        top: 3rem;
+        right: 3rem;
+        transition: 0.3s;
+      }
+      label:after{
+        content: "";
+        width: 2.5rem;
+        height: 2.5rem;
+        position: absolute;
+        top: 0.1rem;
+        left: 0.4rem;
+        background-image: url(img/light.png);
+        border: 1rem;
+        transition: 0.3s;
+      }
+      input{
+        visibility: hidden;
+      }
+      input:checked + label{
+        background: black;
+      }
+      input:checked + label::after{
+        transform: translateX(100%);
+        background: url(img/dark.png);
+      }
+    </style>
+  </head>
+  <body id="body" data-bs-theme="light">
+    <div class="position-absolute top-0 end-0 rounded-circle bg-info z-n1" style="width: 27rem; height: 27rem; translate: 10% -45%;" id="ball"></div>
+    <input type="checkbox" id="darkmode-toggle" onclick="toggleMode()"/>
+    <label for="darkmode-toggle"></label>
+
+    <div class="form-check form-switch mx-4">
+      <input type="checkbox" 
+      class="form-check-input"
+      role="switch"
+      onclick="toggleMode()">
+    </div>
+    <h1 class="text-dark">Hello, world!</h1>
+    <p></p>
+    <script>
+        function toggleMode() {
+          let element = document.body;
+          let text = document.getElementsByTagName("h1")
+          element.dataset.bsTheme =
+          element.dataset.bsTheme == "light" ? "dark" : "light";
+          
+          if (element.dataset.bsTheme == "light") {
+            text.classList.replace("text-dark","text-light");
+          }else {
+            text.classList.replace("text-light","text-dark");
+          }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>

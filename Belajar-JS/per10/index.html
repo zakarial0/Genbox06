@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>per10</title>
+</head>
+<body>
+    <!-- <h1>Time : <span>0</span></h1>
+    <button>Klik</button>
+    <button class="timeout">timeout</button>
+
+    <script>
+        // setInterval dipake buat perulangan berdasarkan waktu
+        let time = document.querySelector("span")
+        let sec = 1
+        let waktu = setInterval(() => {
+            time.innerHTML = sec;
+            sec++
+            },1000)
+        // disini program akan mengupdate data per 1 detik
+
+        // addEventListener mempunyai 2 parameter 1.tidakan 2.apa yang akan terjadi
+        let btn = document.querySelector("button")
+        btn.addEventListener("click", () => {
+        clearInterval(waktu)
+        })
+        // disini saat kita mengklik button dia akan menghentikan interval
+        
+        // ada juga setTimeOut kalo ini cuma dieksekusi 
+        // 1 kali sesuai parameter ke 2
+        let pesan = setTimeout(() => {
+            alert("halo semua")
+        }, 5000);
+
+        btn2 = document.querySelector(".timeout")
+        btn2.addEventListener("click", () => {
+        clearTimeout(pesan)
+        })
+        // kalo mau batalin bisa pake clearTimeout
+        
+    </script> -->
+
+    <h1>event</h1>
+    <form>
+        <input type="text">
+        <button>Kirim</button>
+        <br>
+        <small>Preview</small>
+    </form>
+    <script>
+        let input = document.querySelector("input")
+        let form = document.querySelector("form")
+        let button = document.querySelector("button")
+        let small = document.querySelector("small")
+
+        input.addEventListener('input', () => {
+            small.innerHTML = input.value
+            // ini bakal ngubah small mengikuti value dari input
+        })
+
+        form.addEventListener("submit", (no) => {
+            no.preventDefault()
+            alert(input.value)
+            console.log(no);
+            // ini bakal bikin alert saat kirim form
+            // defaultnya form bakal refresh halaman setelah kirim
+            // buat mencegah bisa tambahin parameter trus .preventDefault 
+        })
+    </script>
+</body>
+</html>
